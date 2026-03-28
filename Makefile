@@ -15,3 +15,6 @@ test:
 clean:
 	rm -rf __pycache__ .pytest_cache 
 	find . -type d -name "__pycache__" -exec rm -rf {} +
+
+research:
+	python3 research_pipeline.py $(args)
