@@ -97,10 +97,23 @@ async def process_pdf(pdf_path, db_path, output_dir, model, num_ctx, verbose=Fal
         if result_content:
             os.makedirs(output_dir, exist_ok=True)
             output_file = os.path.join(output_dir, f"PROCESSED_{filename}.md")
+            
+            # Format the output with model provenance metadata
+            now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            provenance_header = (
+                f"---\n"
+                f"source_file: {filename}\n"
+                f"processed_at: {now}\n"
+                f"model: {model}\n"
+                f"num_ctx: {num_ctx}\n"
+                f"---\n\n"
+            )
+            final_content = provenance_header + result_content
+            
             with open(output_file, "w", encoding="utf-8") as f:
-                f.write(result_content)
+                f.write(final_content)
                 
-            log_processed_paper(db_path, filename, model, result_content)
+            log_processed_paper(db_path, filename, model, final_content)
             if verbose:
                 print(f"Completed {filename}. Output saved to {output_file}.")
         else:
