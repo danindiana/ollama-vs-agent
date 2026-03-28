@@ -1,0 +1,3 @@
+Thinking...
+Okay, so I need to analyze this text about Constructor Theory of Thermodynamics by Chiara Marletto. The user has given
+
