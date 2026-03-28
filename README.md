@@ -52,4 +52,4 @@ Automated extraction and formal refactoring of AI/ML papers.
 3. Use the `research-summary` branch to view architectural refactorings of technical papers.
 
 ---
-*Created by danindiana | Powered by Linux, Ollama, and Dual-NVIDIA VRAM.*
+*Created by calistoa.ai 
