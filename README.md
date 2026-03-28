@@ -1,6 +1,6 @@
 # ollama-vs-agent 🤖💻
 
-Exploring high-precision **VS Code Agent** workflows backed by local **Ollama** runtimes on a dual-GPU Linux workstation (`worlock`).
+Exploring high-precision **VS Code Agent** workflows backed by local **Ollama** runtimes on a dual-GPU Linux workstation (`stanislawlem`).
 
 ![Status](https://img.shields.io/badge/Status-Research--Active-success)
 ![Hardware](https://img.shields.io/badge/Hardware-RTX%203080%20%2B%203060-orange)
